@@ -1,0 +1,135 @@
+html, body {
+    height: 100%;  
+    margin: 0;  
+}
+
+body {
+    font-family: 'Poppins', sans-serif;  
+    margin: 0;
+    padding: 0;
+    background: url("lib.webp") no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    position: relative;
+    overflow: hidden;  
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: -18px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('lib.webp') center/cover no-repeat;
+    filter: blur(3px);
+    z-index: -1;  
+}
+
+.admin-header {
+    background-color: #d13a3f; 
+    color: #fff;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s;
+}
+
+.admin-header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.logout-btn {
+    background-color: #454349; 
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #7c2f2f; 
+    transform: translateY(-2px);
+}
+
+.admin-dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;  
+    max-height: calc(100vh - 120px);  
+    overflow-y: auto;
+    position: relative;
+    top: 40px;  
+}
+
+.admin-card {
+    background-color: #ffffff; 
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    margin: 15px;
+    padding: 30px;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    border-left: 5px solid #d13a3f; 
+    position: relative;
+}
+
+.admin-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+.admin-card h2 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #d13a3f; 
+    transition: color 0.3s ease;
+}
+
+.admin-card p {
+    font-size: 14px;
+    color: #695353;
+    margin-bottom: 20px;
+}
+
+.action-btn {
+    background-color: #f02a0d; 
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.action-btn:hover {
+    background-color: #d13a3f; 
+    transform: translateY(-2px);
+}
+
+
+@media (max-width: 768px) {
+    .admin-dashboard {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .admin-card {
+        width: 90%;
+    }
+}

@@ -1,0 +1,210 @@
+@charset "UTF-8";
+
+/* Global Styles */
+body {
+    background-color: #f8f9fa; /* Light Gray */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+.admin-header {
+    background-color: #d13a3f; /* Deep Red */
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1450px;
+    height: 60px;
+    position: fixed; /* Make header fixed */
+    top: 0;
+    z-index: 1000; /* Keep the header above other elements */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s;
+}
+
+.admin-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Back Button */
+.back-btn {
+    background-color: #454349; /* Gray */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    left: 30px;
+    top: 42px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #7c2f2f; /* Darker Gray */
+    transform: translateY(-2px);
+}
+
+/* Form Container */
+.admin-form-container {
+    margin-top: 120px; /* Adjusted for fixed header */
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px;
+}
+
+/* Form Styling */
+form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    width:700px;
+    position:relative;
+    right:76px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Form Heading */
+form h2 {
+    margin-bottom: 15px;
+    color: #34495e; /* Dark Gray */
+    font-size: 1.6rem;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 3px solid #4a90e2; /* Underline effect */
+    padding-bottom: 8px; /* Space between heading and underline */
+}
+
+/* Input Fields */
+input {
+    width: 95%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #bdc3c7; /* Light Gray */
+    font-size: 13px;
+    transition: border 0.3s ease;
+}
+
+input:focus {
+    border-color: #4a90e2; /* Focus Effect */
+    outline: none; /* Remove default outline */
+}
+
+/* Button Styling */
+.action-btn {
+    background-color: #27ae60; /* Green */
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+}
+
+.action-btn:hover {
+    background-color: #219653; /* Darker Green */
+    transform: translateY(-2px);
+}
+
+.delete-btn {
+    background-color: #e74c3c; /* Red */
+}
+
+.delete-btn:hover {
+    background-color: #c0392b; /* Darker Red */
+}
+
+/* Form Hover Effect */
+form:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Table Styling */
+.styled-table {
+    width: 90%; /* Increased width */
+    margin: 0 auto; /* Center table */
+    border-collapse: collapse;
+    font-size: 16px;
+    min-width: 750px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table thead tr {
+    background-color: #4a90e2;
+    color: #ffffff;
+    text-align: center; /* Center column headers */
+    font-weight: bold;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center; /* Center all cells */
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #f1f5f8;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #4a90e2;
+}
+
+.styled-table td {
+    color: #34495e;
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .admin-form-container {
+        width: 95%;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    .back-btn {
+        font-size: 0.9rem;
+    }
+    .styled-table {
+        font-size: 14px;
+        width: 100%; /* Use full width on smaller screens */
+    }
+}
+
+.book-list-container{
+    text-align:center;
+    font-size:20px;
+}

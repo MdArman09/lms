@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.admin-header {
+    background-color: #d13a3f;
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1450px;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s;
+}
+
+.admin-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    flex-grow: 1;
+    text-align: center;
+}
+
+.back-btn {
+    background-color: #454349;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-right: auto; /* Aligns button to the left */
+}
+
+.back-btn:hover {
+    background-color: #7c2f2f;
+    transform: translateY(-2px);
+}
+
+.admin-form-container {
+    margin-top: 100px;
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+}
+
+/* Add this to your existing CSS */
+
+.book-list {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    table-layout: fixed; /* Ensures consistent column widths */
+}
+
+.book-list th, .book-list td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    min-width: 120px; /* Set a minimum width to keep columns consistent */
+}
+
+.book-list th {
+    background-color: #4a90e2;
+    color: white;
+}
+
+h2 {
+    text-align:center;
+    font-size:30px;
+    text-decoration:overline;
+}

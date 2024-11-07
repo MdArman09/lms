@@ -1,0 +1,118 @@
+@charset "UTF-8";
+/* issueBooks.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admin-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #d13a3f;
+    color: #fff;
+    padding: 10px 20px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-header h1 {
+    font-size: 1.8em;
+    margin-left: 20px;
+}
+
+.back-btn {
+    background-color: #f0da52;
+    color: #333;
+    border: none;
+    padding: 8px 16px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #d1b543;
+}
+
+.admin-form-container {
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.issue-book-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.issue-book-table th,
+.issue-book-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.issue-book-table th {
+    background-color: #d13a3f;
+    color: #fff;
+    font-weight: bold;
+}
+
+.issue-book-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.issue-book-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.action-btn,
+.reject-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.action-btn {
+    background-color: #4CAF50; 
+}
+
+.reject-btn {
+    background-color: #d13a3f; 
+}
+
+.action-btn:hover {
+    background-color: #45a049;
+}
+
+.reject-btn:hover {
+    background-color: #b33233;
+}

@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+ body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+ }
+ 
+ .student-header {
+    background-color: #d13a3f; /* Deep Red */
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1450px;
+    height: 60px;
+    position: fixed; /* Make header fixed */
+    top: 0;
+    z-index: 1000; /* Keep the header above other elements */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s;
+}
+
+  .student-header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.back-btn {
+    background-color: #454349; /* Gray */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    left: 30px;
+    top: 42px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #7c2f2f; /* Darker Gray */
+    transform: translateY(-2px);
+}
+
+ .student-dashboard {
+    display: grid;
+    grid-template-columns: 1fr; /* Full-width single column */
+    gap: 25px;
+    margin-top: 120px;
+    width: 80%;
+    justify-content: center;
+ }
+
+ .student-card {
+    color: #3e4c59;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+ h2 {
+    font-size: 1.6rem;
+    color: #d13a3f;
+    margin-bottom: 10px;
+ }
+
+  .student-footer {
+      background-color: #d13a3f; /* Same dark navy as the header */
+      color: #ffffff; /* White text */
+      padding: 20px;
+      text-align: center;
+      width: 100%;
+      position: relative;
+      bottom: 0;
+      margin-top: 40px;
+      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .student-footer p {
+      margin: 0;
+      font-size: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+      .student-dashboard {
+          width: 95%;
+      }
+  }   

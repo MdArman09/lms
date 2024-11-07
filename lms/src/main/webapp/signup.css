@@ -1,0 +1,227 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    background-image: url(lib.webp);
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+}
+
+form {
+    background-color: #dfdede;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8.5px #d13a3f;
+    max-width: 800px; /* Increased width for two columns */
+    margin: 20px auto; /* Centered and added margin */
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Increased margin for better spacing */
+}
+
+.form-header h2 {
+    font-size: 24px;
+    color: #d13a3f;
+    margin: 0;
+}
+
+.form-header img {
+    height: 100px;
+    margin-left: 10px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+    gap: 15px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="number"],
+form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #f02a0d;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px; /* Increased margin for spacing */
+}
+
+#signup {
+    position: relative;
+    left: 50%;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #f02a0d;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 20px;
+}
+
+form input[type="submit"]::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transition: width 0.3s ease, height 0.3s ease;
+    transform: translate(-50%, -50%);
+}
+
+form input[type="submit"]:hover {
+    background-color: #d13a3f;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+form input[type="submit"]:active {
+    background-color: #c02a0d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    background-color: #d13a3f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+#library-title {
+    margin: 0;
+    font-size: 28px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #f9f9f9;
+    display: inline-block;
+    opacity: 0;
+    animation: title-appear 2s ease forwards;
+    position: relative;
+}
+
+/* Typewriter effect */
+@keyframes title-appear {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px); /* Start off-screen */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* End in place */
+    }
+}
+
+/* Apply a delay to each letter individually using CSS nth-child */
+#library-title::before {
+    content: attr(data-text);
+    position: absolute;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0; /* Start with no width */
+    animation: typing 6s steps(15, end) forwards;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+#library-title:hover {
+    color: #000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav #login {
+    font-size: 18px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+nav #login:hover {
+    color: #000;
+}
+
+nav #login::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+nav #login:hover::after {
+    width: 100%;
+}
+
+#login {
+    font-weight: bold;
+}
+
+/* Style for the password toggle */
+#toggle {
+    position: relative;
+    left: 91%;
+    bottom: 31%;
+    font-size: larger;
+    cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr; /* Stack in a single column on smaller screens */
+    }
+}
